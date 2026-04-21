@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vmra-mar"
+version = "0.4.0"
+description = "VMRA-MaR style longitudinal mammography risk modeling on CSAW-CC metadata."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3",
+    "lifelines",
+    "numpy",
+    "pydicom",
+    "scikit-learn",
+    "torch",
+    "torchvision",
+]
+
+[project.optional-dependencies]
+vmamba = [
+    "causal-conv1d",
+    "mamba-ssm",
+]
+
+[project.scripts]
+vmra-mar-download = "vmra_mar.download:main"
+vmra-mar-train = "vmra_mar.train:main"
+
+[project.urls]
+Homepage = "https://github.com/Mortal-Suen/VMRA-MaR"
+Repository = "https://github.com/Mortal-Suen/VMRA-MaR"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
