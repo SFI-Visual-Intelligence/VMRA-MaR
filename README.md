@@ -1,3 +1,5 @@
+Paper: VMRA-MaR: An Asymmetry-Aware Temporal Framework for Longitudinal Breast Cancer Risk Prediction ([Link](https://api.nva.unit.no/publication/019991bb2ab0-390a12ea-05cc-485c-a027-c6d0dfec9a09))
+
 # VMRA-MaR 
 This repository contains the Python implementation for a VMRA-MaR style
 longitudinal mammography risk modeling pipeline. The code is organized as a
